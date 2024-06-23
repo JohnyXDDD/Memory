@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Peralta&family=Roboto:wght@400;500;700;900&display=swap');
+body{
+    margin:0;
+    background-color: #000;
+    color: #fff;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+.box{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    display: grid;
+}
+.info h1{
+    font-size:64px;
+    letter-spacing:0.1em;
+    font-weight: 700;
+    margin:0 0 32px 0;
+    color:white;
+    text-shadow: 4px 4px 0px rgba(162, 0, 195, 1);
+    text-align: center;
+}
+.info button{
+    width: 300px;
+    margin: 0 auto;
+    border:none;
+    outline: none;
+    transition: all 0.384s ease-in-out;
+    color: #fff;
+    background: rgb(233,135,250);
+    background: radial-gradient(circle, rgba(233,135,250,1) 0%, rgba(195,40,227,1) 49%, rgba(77,0,78,1) 100%);
+    text-shadow: 2px 2px 0px #000;
+    font-size:24px;
+    font-weight:bold;
+    padding:8px 16px;
+    border-radius:2px;
+    cursor: pointer;
+}
+.info button:hover{
+    font-size: 28px;
+}
+.board{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 24px;
+    background-color: #000;
+    position: relative;
+}
+.board button{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    transition: all 0.384s ease-in-out;
+    background-color: #000;
+    outline:none;
+    border:none;
+    /* border:2px solid black; */
+}
+.field{
+    cursor: pointer;
+    background: url('card_images/background.png');
+    background-size: cover;
+}
+.field:hover{
+    -webkit-box-shadow: 0px 0px 32px 4px rgba(197, 86, 255, 1);
+    -moz-box-shadow: 0px 0px 32px 4px rgba(197, 86, 255, 1);
+    box-shadow: 0px 0px 32px 4px rgba(197, 86, 255, 1);
+}
+#score{
+font-size:32px;
+letter-spacing:0.1em;
+font-weight: 700;
+margin:0 0 16px 0;
+color:white;
+text-shadow: 2px 2px 0px rgba(162, 0, 195, 1);
+}
+#audio_button{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:8px;
+    color:white;
+    text-shadow: 2px 2px 0px rgba(162, 0, 195, 1);
+    font-size:24px;
+    cursor: pointer;
+}
+@media (max-width: 1024px){
+    .board button{
+    width: 180px;
+    height: 180px;
+}
+}
+@media (max-width: 860px){
+    .board button{
+    width: 150px;
+    height: 150px;
+    }
+    .board{
+        gap: 16px;
+    }
+}
+@media (max-width: 700px){
+    .board button{
+    width: 120px;
+    height: 120px;
+}
+}
+@media (max-width: 700px){
+    .board button{
+    width: 120px;
+    height: 120px;
+}
+}
+@media (max-width: 560px){
+    .board{
+        grid-template-columns: auto auto auto;
+    }
+    .board button{
+        width: 80px;
+        height: 80px;
+    }
+}
+/* .board{
+    grid-template-columns: auto auto auto;
+    gap: 12px;
+} */
